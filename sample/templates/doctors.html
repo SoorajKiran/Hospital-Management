@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Doctors{% endblock %}
+{% block content %}
+
+{% for i in doctors %}
+<div style="text-align:center;margin:50px;margin-left:250px;margin-right:250px;padding:20px;background:rgb(2, 117, 216);color:white">
+    
+    <img style="width:250px;height:250px" src="{{i.doc_image.url}}">
+    <h4>{{i.doc_name}}</h2>
+    <h6>{{i.dep_name}}</h4>
+    <p>{{i.doc_spec}}</p>
+
+
+</div>
+{%endfor%}
+
+{% endblock %}
